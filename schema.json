@@ -5,17 +5,25 @@
 	"maps": {
 		"users/.+/data.json": {
 			"to_table": [
-				"comment",
-				{"node": "comment_vote", "table": "comment_vote", "key_col": "comment_uri", "val_col": "vote"},
-				{"node": "post_vote", "table": "post_vote", "key_col": "post_id", "val_col": "vote"}
+				"comment", {
+					"node": "comment_vote",
+					"table": "comment_vote",
+					"key_col": "comment_uri",
+					"val_col": "vote"
+				}, {
+					"node": "post_vote",
+					"table": "post_vote",
+					"key_col": "post_id",
+					"val_col": "vote"
+				}
 			]
 		},
 		"users/.+/content.json": {
-			"to_keyvalue": [ "cert_user_id" ]
+			"to_keyvalue": ["cert_user_id"]
 		},
 		"data.json": {
-			"to_table": [ "post" ],
-			"to_keyvalue": [ "title", "description", "links", "next_post_id", "demo", "modified" ]
+			"to_table": ["post"],
+			"to_keyvalue": ["title", "description", "links", "next_post_id", "demo", "modified"]
 		}
 
 	},
